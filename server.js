@@ -9,7 +9,7 @@ const morgan = require("morgan"); //Brings in Morgan Library
 const cors = require("cors"); //Brings in CORS library
 const mongoose = require("mongoose"); //bring in mongoose library
 
-const GifsRouter = require("./routes/gifs.js") //<--------- brings in gifs router
+
 
 
 //////////////////////
