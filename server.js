@@ -69,7 +69,7 @@ app.use(express.static("public")); //Allows static serving of files from public 
 // ROUTES AND ROUTERS
 ////////////////////
 //These handle sending responses to server requests for spefic endpoints
-app.use("/") 
+//app.use("/") 
 
 ///////////////////////////
 //ROOT ROUTE (FOR TESTING)
