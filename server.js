@@ -75,7 +75,7 @@ app.use(express.static("public")); //Allows static serving of files from public 
 //ROOT ROUTE (FOR TESTING)
 ///////////////////////////
 app.get("/", (req, res) => {
-  res.send("If you see this then the server is working!");
+  res.send("What's up, there's nothing here yet, but there will be soon. Stay tuned for updates!");
 });
 
 ////////////////////
