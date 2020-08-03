@@ -9,6 +9,8 @@ const morgan = require("morgan"); //Brings in Morgan Library
 const cors = require("cors"); //Brings in CORS library
 const mongoose = require("mongoose"); //bring in mongoose library
 
+const QuotesRouter = require("./routes/quotes.js") //<---- brings in quotes router
+
 
 
 
@@ -69,7 +71,7 @@ app.use(express.static("public")); //Allows static serving of files from public 
 // ROUTES AND ROUTERS
 ////////////////////
 //These handle sending responses to server requests for spefic endpoints
-//app.use("/") 
+app.use("/quotes", QuotesRouter) 
 
 ///////////////////////////
 //ROOT ROUTE (FOR TESTING)
