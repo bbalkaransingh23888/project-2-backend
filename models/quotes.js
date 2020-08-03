@@ -10,7 +10,7 @@ const quotesSchema = new Schema ({
     quoteUse: 
     {type: String, required: false},
     quoteSourceType: 
-    {type: String, required: true}
+    [{type: Schema.Types.ObjectId, required: true, ref: "movies"}]
 })
 
 //export Quotes model/Schema
