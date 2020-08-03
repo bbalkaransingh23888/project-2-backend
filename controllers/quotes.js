@@ -1,4 +1,5 @@
 const Quotes = require("../models/quotes")
+const Movies = require("../models/movies")
 
 //INDEX - GET all quotes
 
