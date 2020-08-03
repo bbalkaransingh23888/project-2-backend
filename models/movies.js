@@ -1,6 +1,6 @@
 const mongoose= require('mongoose');
-const { builtinModules } = require('module');
-const Schema = mongoose.Schema;
+//const { builtinModules } = require('module');
+const {Schema, model} = mongoose;
 
 const MoviesSchema = new Schema ({
     title: 
@@ -10,9 +10,9 @@ const MoviesSchema = new Schema ({
     actors: 
     {type: [String], required: true},
     whoSaid: 
-    {type: String, required: true, ref: 'quotes'},
+    {type: Schema.Types.ObjectId, required: true, ref: "quotes"},
     releaseYear:
     {type: Number, required: true}
 })
 
-module.exports = mongoose.model('movies', MoviesSchema)
+module.exports = model('movies', MoviesSchema)

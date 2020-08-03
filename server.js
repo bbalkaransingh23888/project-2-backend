@@ -8,9 +8,10 @@ const app = express(); //creates express application object
 const morgan = require("morgan"); //Brings in Morgan Library
 const cors = require("cors"); //Brings in CORS library
 const mongoose = require("mongoose"); //bring in mongoose library
+mongoose.promise = Promise;
 
 const QuotesRouter = require("./routes/quotes.js") //<---- brings in quotes router
-
+//const MoviesRouter = require("./routes/quotes.js")
 
 
 
@@ -71,7 +72,8 @@ app.use(express.static("public")); //Allows static serving of files from public 
 // ROUTES AND ROUTERS
 ////////////////////
 //These handle sending responses to server requests for spefic endpoints
-app.use("/quotes", QuotesRouter) 
+app.use("/quotes", QuotesRouter)
+//app.use("/movies", MoviesRouter) 
 
 ///////////////////////////
 //ROOT ROUTE (FOR TESTING)

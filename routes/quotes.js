@@ -1,15 +1,22 @@
 const express = require("express");
 const QuotesRouter = express.Router();
-const { index, create, update, destroy } = require("../controllers/quotes.js")
+//const MoviesRouter = express.Router();
+const { indexQuotes, indexMovies, createQuotes, createMovies, update, destroyQuotes, destroyMovies } = require("../controllers/quotes.js")
 
 // routes and middleware specific to this router
 
-QuotesRouter.get("/", index);
+QuotesRouter.get("/", indexQuotes);
 
-QuotesRouter.post("/", create);
+QuotesRouter.get("/movies", indexMovies)
+
+QuotesRouter.post("/quotes", createQuotes);
+
+QuotesRouter.post("/movies", createMovies);
 
 QuotesRouter.put("/:id", update);
 
-QuotesRouter.delete("/:id", destroy);
+QuotesRouter.delete("/quotes/:id", destroyQuotes);
+
+QuotesRouter.delete("/movies/:id", destroyMovies);
 
 module.exports = QuotesRouter;
