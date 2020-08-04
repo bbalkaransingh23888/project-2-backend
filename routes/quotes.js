@@ -5,7 +5,7 @@ const { indexQuotes, indexMovies, createQuotes, createMovies, update, destroyQuo
 
 // routes and middleware specific to this router
 
-QuotesRouter.get("/", indexQuotes);
+QuotesRouter.get("/quotes", indexQuotes);
 
 QuotesRouter.get("/movies", indexMovies)
 

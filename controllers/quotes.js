@@ -1,13 +1,14 @@
+const mongoose = require("mongoose")
 const Quotes = require("../models/quotes")
 const Movies = require("../models/movies")
-const objectify = mongoose.Types.ObjectId;
+const objectify = mongoose.Types.ObjectId
 
 //INDEX - GET all quotes
 
 const indexQuotes = async (req, res) => {
     //get Quotes
     try {
-        const allQuotes = await Quotes.find().populate("movies");
+        const allQuotes = await Quotes.find().populate("quoteSourceType");
         res.status(200).json(allQuotes);
     } catch (error) {
         //throw error if something goes wrong
@@ -19,7 +20,7 @@ const indexQuotes = async (req, res) => {
 const indexMovies = async (req, res) => {
     //get Quotes
     try {
-        const allMovies = await Movies.find().populate("quotes");
+        const allMovies = await Movies.find()
         res.status(200).json(allMovies);
     } catch (error) {
         //throw error if something goes wrong
@@ -32,11 +33,9 @@ const indexMovies = async (req, res) => {
 const createQuotes = async (req, res) => {
     //create a new want
     try {
-        req.body.Quotes = objectify(req.body.Quotes)
-        const newMovies = await Movies.create(req.body);
-        const allQuotes = await Quotes.find().populate("movies");
-        await allQuotes.Movies.push(newMovies._id);
-        await allQuotes.save();
+        req.body.quoteSourceType = objectify(req.body.quoteSourceType);
+        const newQuotes = await Quotes.create(req.body); 
+        const allQuotes = await Quotes.find().populate("quoteSourceType");
         res.send(200).json(allQuotes);
     } catch (error) {
         res.status(400).send(error)
@@ -49,7 +48,7 @@ const createMovies = async (req, res) => {
     //create a new want
     try {
         const newMovies = await Movies.create(req.body);
-        const allMovies = await Movies.find().populate("quotes");
+        const allMovies = await Movies.find()
         res.send(200).json(allMovies);
     } catch (error) {
         res.status(400).send(error)

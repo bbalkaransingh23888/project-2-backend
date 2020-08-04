@@ -9,8 +9,6 @@ const MoviesSchema = new Schema ({
     {type: String, required: true},
     actors: 
     {type: [String], required: true},
-    whoSaid: 
-    {type: Schema.Types.ObjectId, required: true, ref: "quotes"},
     releaseYear:
     {type: Number, required: true}
 })
