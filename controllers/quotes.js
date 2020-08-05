@@ -56,12 +56,25 @@ const createMovies = async (req, res) => {
 }
 
 //UPDATE - ADDS new info. to quote
-const update = async (req, res) => {
+const updateQuotes = async (req, res) => {
     //update existing quote by id
     try {
         const updatedQuotes = await Quotes.findByIdAndUpdate(req.params.id, req.body, {new: true});
         const allQuotes = await Quotes.find();
         res.status(200).json(allQuotes);
+    } catch (error) {
+        //throw an error if something goes wrong
+        res.status(400).send(error);
+    }
+};
+
+//UPDATE - ADDS new info. to quote
+const updateMovies = async (req, res) => {
+    //update existing movie by id
+    try {
+        const updatedMovies = await Movies.findByIdAndUpdate(req.params.id, req.body, {new: true});
+        const allMovies = await Movies.find();
+        res.status(200).json(allMovies);
     } catch (error) {
         //throw an error if something goes wrong
         res.status(400).send(error);
@@ -95,4 +108,4 @@ const destroyMovies = async (req, res) => {
 }
 
 
-module.exports = {indexQuotes, indexMovies, createQuotes, createMovies, update, destroyQuotes, destroyMovies};
+module.exports = {indexQuotes, indexMovies, createQuotes, createMovies, updateQuotes, updateMovies, destroyQuotes, destroyMovies};
