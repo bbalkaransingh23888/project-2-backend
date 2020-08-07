@@ -19,6 +19,8 @@ Quotes Model: !['Quotes Model'](images/image4.jpeg)
 
 Movies Model: !['Movies Model'](images/image4.jpeg)
 
+Time-Priority Index: !['Time/Priority Index'](images/image1.jpeg)
+
 MVP list:
 1)	Full CRUD for the quotes model
 2)	A second model for movies
