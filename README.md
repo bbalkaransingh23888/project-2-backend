@@ -15,9 +15,9 @@ I should be on line 3 on the Google sheet
 
 Models: 
 
-Quotes Model: !['Desktop Wireframe'](images/image4.jpeg)
+Quotes Model: !['Quotes Model'](images/image4.jpeg)
 
-Movies Model: !['Desktop Wireframe'](images/image4.jpeg)
+Movies Model: !['Movies Model'](images/image4.jpeg)
 
 MVP list:
 1)	Full CRUD for the quotes model
@@ -44,4 +44,4 @@ Post-MVP:
 
 |Component|Difficulty|Est. Time|Time Invested|Actual Time|
 |---------|--------------------|---------|-------------|-----------|
-|My overly ambitious and complicated (at the moment) desire for this app|Low|24 Hrs.|n/a|n/a|
+|My overly ambitious and complicated (at the moment) desire for this app|Low|24 Hrs. minimum|n/a|n/a|
