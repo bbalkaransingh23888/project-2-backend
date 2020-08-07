@@ -15,11 +15,11 @@ I should be on line 3 on the Google sheet
 
 Models: 
 
-Quotes Model: !['Quotes Model'](images/image4.jpeg)
+Quotes Model: !['Quotes Model'](/Users/marilynbalkaransingh/Documents/project-2/image1.jpeg)
 
-Movies Model: !['Movies Model'](images/image4.jpeg)
+Movies Model: !['Movies Model'](/Users/marilynbalkaransingh/Documents/project-2/image2.jpeg)
 
-Time-Priority Index: !['Time/Priority Index'](images/image1.jpeg)
+Time-Priority Index: !['Time/Priority Index'](/Users/marilynbalkaransingh/Documents/project-2/image4.jpeg)
 
 MVP list:
 1)	Full CRUD for the quotes model
